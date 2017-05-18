@@ -11,6 +11,6 @@ import { Component } from '@angular/core';
       <p>You may be lost. Follow the breadcrumbs back <a routerLink="/">home</a>.</p>
     </div>
   `,
-    styles:[`.jumbotron{background-color:#ffffff;}`]
+    styles:[`.jumbotron{background-color:inherit;}`]
 })
 export class NotFoundComponent {}

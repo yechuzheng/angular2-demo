@@ -14,10 +14,12 @@ import { VgBufferingModule } from 'videogular2/buffering';
 import { VgOverlayPlayModule } from 'videogular2/overlay-play';
 import { VgStreamingModule } from 'videogular2/streaming';
 import { VgImaAdsModule } from 'videogular2/ima-ads';
+import {SwfObjectComponent} from "./swfObject/swfObject.component";
 @NgModule({
     declarations: [
         TestComponent,
-        VideoGular2Component
+        VideoGular2Component,
+        SwfObjectComponent
     ],
     imports: [
         SharedModule,

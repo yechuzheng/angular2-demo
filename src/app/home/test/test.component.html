@@ -5,9 +5,11 @@
         <h3>功能测试</h3>
         <div class="btn-toolbar" role="toolbar" aria-label="...">
             <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-primary" [routerLink]="['/test/videogular2']">videogular2</button>
+                <button type="button" class="btn btn-primary" [ngClass]="{active: active == 'videogular2'}" (click)="active = 'videogular2'" [routerLink]="['/test/videogular2']">videogular2</button>
+                <button type="button" class="btn btn-primary" [ngClass]="{active: active == 'swfObject'}" (click)="active = 'swfObject'" [routerLink]="['/test/swfObject']">swfObject</button>
             </div>
         </div>
+        <hr>
         <router-outlet></router-outlet>
     </div>
 </div>

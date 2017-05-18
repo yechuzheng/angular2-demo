@@ -7,6 +7,7 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { TestComponent } from './test.component';
 import { VideoGular2Component } from './videogular2/videogular2.component';
+import { SwfObjectComponent } from './swfObject/swfObject.component';
 
 const testRoutes: Routes = [
     {
@@ -14,6 +15,7 @@ const testRoutes: Routes = [
         component: TestComponent,
         children: [
             { path: 'videogular2',component: VideoGular2Component },
+            { path: 'swfObject',component: SwfObjectComponent },
         ]
     }
 ];
