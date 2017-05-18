@@ -1,0 +1,14 @@
+<home-navbar class="home-navbar" [navbarExpand]="false"></home-navbar>
+<p-growl [value]="msgs"></p-growl>
+<div class="container-main">
+    <div class="container">
+        <h3>功能测试</h3>
+        <div class="btn-toolbar" role="toolbar" aria-label="...">
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-primary" [routerLink]="['/test/videogular2']">videogular2</button>
+            </div>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>
+

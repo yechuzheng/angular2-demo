@@ -1,0 +1,86 @@
+<home-navbar class="home-navbar" [navbarExpand]="true"></home-navbar>
+
+
+<div class=" swiper-container">
+    <ks-swiper-container [options]="example1SwipeOptions">
+        <ks-swiper-slide *ngFor="let item of slide">
+            <div class="jumbotron masthead" ngClass="{{item.class}}">
+                <div class="container">
+                    <h1>{{item.h1}}</h1>
+                    <h2>{{item.h2}}<i class="fa fa-heartbeat" aria-hidden="true"></i></h2>
+                </div>
+            </div>
+        </ks-swiper-slide>
+    </ks-swiper-container>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Arrows -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<div class="bc-social">
+    <div class="container">
+        <div class="col-sm-3 col-xs-6 social"><i class="fa fa-qq"></i> QQ：<span id="qqgroup">469479402</span></div>
+        <div class="col-sm-3 col-xs-6 social"><i class="fa fa-weixin" aria-hidden="true"></i> 微信：<span id="wxgroup">yechuzheng</span></div>
+        <div class="col-sm-3 col-xs-6 social"><a href="http://weibo.com/yechuzheng" title="新浪微博" target="_blank"><i class="fa fa-weibo"></i> 新浪微博：@达达尼Y</a></div>
+        <div class="col-sm-3 col-xs-6 social"><a href="https://github.com/yechuzheng" title="GitHub" target="_blank"><i class="fa fa-github" aria-hidden="true"></i> GitHub</a></div>
+    </div>
+</div>
+
+
+
+<section class="features-container section--center mdl-grid mdl-grid--no-spacing">
+    <div class="features-list">
+        <h3>angular2-demo</h3>
+        <h4>Prerequisites</h4>
+        <ul style="list-style-type:decimal;margin-left: 20px">
+            <li>
+                <p>Install <a href="http://nodejs.org" target="_blank">Node.js</a></p>
+                <ul style="list-style-type: disc;margin-left: 30px">
+                    <li>
+                        <p>on OSX use <a href="http://brew.sh" target="_blank">homebrew</a> brew install node</p>
+                    </li>
+                    <li>
+                        <p>on Windows use <a href="https://chocolatey.org/" target="_blank">chocolatey</a> choco install nodejs</p>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <p>Clone pokedex's repo </p>
+                <p><code>git clone https://github.com/yechuzheng/angular2-demo.git </code></p>
+            </li>
+            <li>
+                <p>Install npm dependencies</p>
+                <p><code>npm install</code></p>
+            </li>
+            <li>
+                <p>Start and enjoy</p>
+                <p><code>npm start</code></p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="features-list">
+        <h3>angular2-swiper</h3>
+        <p>Angular 2 Swiper component that wraps <a href="http://idangero.us/swiper" target="_blank">http://idangero.us/swiper</a></p>
+        <h4>Install</h4>
+        <p><code>npm install angular2-swiper --save</code></p>
+        <h4>Usage</h4>
+        <p>See <a href="https://github.com/ksachdeva/angular2-swiper-example" target="_blank">angular2-swiper-example</a> repository for various examples</p>
+    </div>
+
+    <div class="button-container mdl-cell mdl-cell--12-col-desktop center">
+        <a target="_blank" href="https://github.com/yechuzheng/angular2-demo" class="cta-button mdl-typography--font-regular mdl-button mdl-button--raised mdl-button--accent">
+            Download Project
+        </a>
+    </div>
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col-md-1 col-md"><img src="../../../assets/images/home-logo.png" style="width: 40px" alt=""></div>
+        <div class="col-md-2 col-md">Angular2 Demo</div>
+        <div class="col-md-9 Reserved col-md">© 2017 YeChuZheng. All Rights Reserved. BY 1.0.</div>
+    </div>
+</footer>

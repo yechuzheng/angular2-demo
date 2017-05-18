@@ -1,0 +1,43 @@
+<p-growl [value]="msgs"></p-growl>
+<div class="login">
+    <a routerLink="/" class="return_home glyphicon glyphicon-home"></a>
+    <i class="glyphicon glyphicon-question-sign"></i>
+    <div class="photo"></div>
+    <span>账号登录</span>
+    <form  (ngSubmit)="login(loginForm)" #loginForm="ngForm">
+        <div class="form-group">
+            <label for="username">邮箱</label>
+            <input type="text" class="form-control" id="username" name="username"
+                   placeholder="Email"
+                   [(ngModel)]="user.username"
+                   required
+                   minlength="5"
+                   #username="ngModel" [autofocus]="true"><!--pattern="^[a-zA-Z0-9.!#$%&』*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"-->
+                <ul *ngIf="username.errors && (username.dirty || username.touched)">
+                    <li *ngIf="username.errors.required">邮箱不能为空</li>
+                    <li *ngIf="username.errors.minlength">最少要 5 個字</li>
+                    <!--<li *ngIf="username.errors.pattern">請輸入正確的 Email 格式</li>-->
+                </ul>
+
+        </div>
+
+        <div class="form-group">
+            <label for="password">密码</label>
+            <input type="password" class="form-control" id="password" required [(ngModel)]="user.password" name="password" #password="ngModel"
+                   (keydown.enter)="loginForm.form.valid && onSubmit(loginForm)">
+                <div *ngIf="password.errors && (password.dirty || password.touched)">
+                <ul>
+                    <li *ngIf="password.errors.required">密码不能为空</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" [(ngModel)]="user.rem" name="rem" id="rem">
+            <label for="rem">记住密码</label>
+            <a class="forget_password" href="javascript:;">忘记密码</a>
+        </div>
+        <div class="form-group">
+            <button id="submit" type="submit" class="btn btn-info" [disabled]="!loginForm.form.valid">登录</button>
+        </div>
+    </form>
+</div>
