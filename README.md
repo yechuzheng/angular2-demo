@@ -1,14 +1,35 @@
-# MyApp02
+# angular2-demo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+## Prerequisites
+
+1. Install [Node.js](http://nodejs.org)
+ - on OSX use [homebrew](http://brew.sh) `brew install node`
+ - on Windows use [chocolatey](https://chocolatey.org/) `choco install nodejs`
+
+2. Clone pokedex's repo
+    ```bash
+      git clone https://github.com/yechuzheng/angular2-demo.git
+    ```
+
+3. Install npm dependencies
+    ```bash
+      npm install
+    ```
+4. Start and enjoy
+
+    ```bash
+      npm start
+    ```
+    
+    
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-beta.31.
 
 ## Development server
-
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
 ## Build
 
@@ -26,3 +47,4 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
