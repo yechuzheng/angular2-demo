@@ -1,6 +1,13 @@
 <home-navbar class="home-navbar" [navbarExpand]="false"></home-navbar>
 <p-growl [value]="msgs"></p-growl>
 <div style="height: 650px">
-    <h3>swfObject</h3>
+    <div class="btn-group" style="margin-bottom: 10px">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{Source.name || "无摄像头"}} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" *ngIf="sources" style="min-width: inherit">
+            <li  [ngClass]="{active: Source.id == item.id}" *ngFor="let item of sources"><a href="javascript:;"  (click)="onClickStream(item)">{{item.name}}</a></li>
+        </ul>
+    </div>
     <video #videoPlay id="videoPlay" class="my_video"></video>
 </div>

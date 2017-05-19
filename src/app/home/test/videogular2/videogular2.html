@@ -1,6 +1,14 @@
 <home-navbar class="home-navbar" [navbarExpand]="false"></home-navbar>
 <p-growl [value]="msgs"></p-growl>
 <div *ngIf="Source">
+    <div class="btn-group" style="margin-bottom: 10px">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            {{Source.name || "无摄像头"}} <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" *ngIf="sources" style="min-width: inherit">
+            <li  [ngClass]="{active: Source.id == item.id}" *ngFor="let item of sources"><a href="javascript:;"  (click)="onClickStream(item)">{{item.name}}</a></li>
+        </ul>
+    </div>
     <vg-player (onPlayerReady)="onPlayerReady($event)" style="box-shadow: 0px 4px 17px 0px rgba(0, 0, 0, 0.77)">
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
@@ -26,12 +34,5 @@
                crossorigin>
         </video>
     </vg-player>
-    <div class="btn-group pull-right" style="margin-top: 10px">
-        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{Source.name || "无摄像头"}} <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu" *ngIf="sources" style="min-width: inherit">
-            <li  [ngClass]="{active: Source.id == item.id}" *ngFor="let item of sources"><a href="javascript:;"  (click)="onClickStream(item)">{{item.name}}</a></li>
-        </ul>
-    </div>
+
 </div>
